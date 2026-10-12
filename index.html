@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EduNova AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="login-box">
+  <h1>EduNova AI</h1>
+  <p>Student Performance & Risk Analysis</p>
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+  <p class="hint">Use: demo / demo123</p>
+</div>
+
+<div id="dashboard" style="display:none;">
+  <header>
+    <h1>EduNova AI Dashboard</h1>
+    <button onclick="logout()" class="logout">Logout</button>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search student..." onkeyup="filterTable()">
+    <select id="deptFilter" onchange="filterTable()">
+      <option value="">All Departments</option>
+      <option value="CSE">CSE</option>
+      <option value="AIML">AIML</option>
+      <option value="AIDS">AIDS</option>
+    </select>
+  </div>
+
+  <div class="cards">
+    <div class="card red" onclick="loadCategory('High')"><h3>High Risk</h3><p><span id="highCount">0</span> Students</p></div>
+    <div class="card orange" onclick="loadCategory('Medium')"><h3>Medium Risk</h3><p><span id="medCount">0</span> Students</p></div>
+    <div class="card green" onclick="loadCategory('Low')"><h3>Low Risk</h3><p><span id="lowCount">0</span> Students</p></div>
+    <div class="card blue" onclick="loadCategory('AvgScore')"><h3>Avg Score</h3><p><span id="avgScore">0</span></p></div>
+  </div>
+
+  <div class="cards">
+    <div class="card purple" onclick="loadCategory('Champions')"><h3>Champions</h3><p><span id="champCount">0</span></p></div>
+    <div class="card teal" onclick="loadCategory('Promising')"><h3>Promising</h3><p><span id="promCount">0</span></p></div>
+    <div class="card orange" onclick="loadCategory('At Risk')"><h3>At-Risk Learners</h3><p><span id="riskLearnCount">0</span></p></div>
+    <div class="card red" onclick="loadCategory('Critical')"><h3>Critical</h3><p><span id="critCount">0</span></p></div>
+  </div>
+<h3 id="tableTitle">All Students</h3>
+<p id="resultCount">Total: 0 Students</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Dept</th><th>CGPA</th><th>Att</th><th>Backlogs</th>
+        <th>LMS</th><th>Aptitude</th><th>Coding</th><th>Score</th><th>Risk</th><th>Segment</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+<h2 class="chart-title">AI Suggestions & Interventions</h2>
+<div class="suggest-box">
+  <div class="suggest-card red-bg"><h3>High Risk Action</h3><p id="suggestHigh"></p></div>
+  <div class="suggest-card orange-bg"><h3>Medium Risk Action</h3><p id="suggestMed"></p></div>
+  <div class="suggest-card green-bg"><h3>Low Risk Action</h3><p id="suggestLow"></p></div>
+</div>
+  <h2 class="chart-title">Risk Analysis Charts</h2>
+  <div class="charts">
+    <div class="chart-box"><canvas id="pieChart"></canvas></div>
+    <div class="chart-box"><canvas id="barChart"></canvas></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

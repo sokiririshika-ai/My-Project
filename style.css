@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 50%,#2563eb 100%);min-height:100vh;padding:25px;color:#1e293b}
+.login-box{max-width:420px;margin:90px auto;background:rgba(255,255,255,.98);padding:45px 40px;border-radius:24px;box-shadow:0 25px 50px rgba(0,0,0,.35);text-align:center;border:1px solid rgba(255,255,255,.6)}
+.login-box h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#2563eb,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.login-box p{color:#64748b;font-size:14px;margin-bottom:25px}
+.login-box input{width:100%;padding:14px 16px;margin:9px 0;border:2px solid #e2e8f0;border-radius:12px;font-size:15px;outline:none;transition:.3s}
+.login-box input:focus{border-color:#2563eb;box-shadow:0 0 0 4px rgba(37,99,235,.15)}
+.login-box button{width:100%;padding:14px;margin-top:12px;background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:12px;cursor:pointer;font-size:16px;font-weight:600;transition:.3s;box-shadow:0 10px 20px rgba(37,99,235,.35)}
+.login-box button:hover{transform:translateY(-2px);box-shadow:0 15px 25px rgba(37,99,235,.45)}
+.hint{margin-top:18px !important;font-size:13px;color:#94a3b8 !important}
+#dashboard{max-width:1400px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.97);padding:22px 28px;border-radius:18px;margin-bottom:22px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+header h1{font-size:26px;font-weight:800;color:#1e293b}
+.logout{background:linear-gradient(90deg,#ef4444,#dc2626);color:#fff;border:none;padding:11px 24px;border-radius:10px;cursor:pointer;font-weight:600;transition:.3s}
+.logout:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(239,68,68,.4)}
+.controls{display:flex;gap:16px;margin-bottom:22px}
+.controls input,.controls select{padding:14px 16px;border:none;border-radius:12px;flex:1;font-size:15px;outline:none;background:rgba(255,255,255,.97);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.cards{display:flex;gap:18px;margin-bottom:20px;flex-wrap:wrap}
+.card{flex:1;min-width:160px;padding:24px 18px;border-radius:18px;color:#fff;text-align:center;box-shadow:0 12px 25px rgba(0,0,0,.22);transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px)}
+.card h3{font-size:14px;font-weight:600;opacity:.92;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.card p{font-size:26px;font-weight:800}
+.red{background:linear-gradient(135deg,#ef4444,#b91c1c)}
+.orange{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.green{background:linear-gradient(135deg,#22c55e,#15803d)}
+.blue{background:linear-gradient(135deg,#2563eb,#1d4ed8)}
+.purple{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.teal{background:linear-gradient(135deg,#14b8a6,#0f766e)}
+table{width:100%;background:#fff;border-radius:18px;overflow:hidden;border-collapse:collapse;margin-bottom:32px;font-size:14px;box-shadow:0 15px 35px rgba(0,0,0,.18)}
+th{background:linear-gradient(90deg,#1e293b,#2563eb);color:#fff;padding:15px 12px;text-align:left;font-weight:600}
+td{padding:13px 12px;border-bottom:1px solid #f1f5f9;color:#334155}
+tr:hover td{background:#eff6ff}
+.chart-title{text-align:center;margin-bottom:22px;color:#fff;font-size:24px;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.charts{display:flex;gap:22px;flex-wrap:wrap}
+.chart-box{flex:1;min-width:320px;background:rgba(255,255,255,.97);padding:26px;border-radius:18px;box-shadow:0 15px 35px rgba(0,0,0,.2)}
+@media(max-width:768px){.controls,.charts{flex-direction:column}header{flex-direction:column;gap:14px;text-align:center}}
+.suggest-box{display:flex;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.suggest-card{flex:1;min-width:250px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.15);border-top:5px solid #2563eb}
+.suggest-card h3{margin-bottom:10px;font-size:16px}
+.suggest-card p{color:#475569;font-size:14px;line-height:1.6}
+.red-bg{border-top-color:#ef4444}.orange-bg{border-top-color:#f59e0b}.green-bg{border-top-color:#22c55e}
